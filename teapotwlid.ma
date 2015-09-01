@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: teapotwlid.ma
-//Last modified: Tue, Sep 01, 2015 11:30:47 AM
+//Last modified: Tue, Sep 01, 2015 11:37:32 AM
 //Codeset: 1252
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E599D947-45D0-CA33-A074-2A99BBE9AC76";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.7628266587665546 2.9502989694839172 1.2520833324243148 ;
-	setAttr ".r" -type "double3" 360.26164728450095 1164.1999999995069 2.4588357321112291e-016 ;
+	setAttr ".t" -type "double3" 7.7113765729953183 2.3989416858473649 -1.0406159505759032 ;
+	setAttr ".r" -type "double3" 357.86164728446721 1179.7999999994854 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BB74350C-4348-3F11-1AC0-32BD5AFD97EC";
 	setAttr -k off ".v" no;
@@ -328,6 +328,8 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 createNode transform -n "pPlane1" -p "pCube1";
 	rename -uid "C7CF0983-4BC8-C756-5581-92ABC6EBDDA4";
 	setAttr ".t" -type "double3" -0.027571090215461905 1.8330187655273975 0.013594291995298102 ;
+	setAttr -l on ".tz";
+	setAttr -l on ".tx";
 	setAttr ".r" -type "double3" 0 -0.18910440755145927 0 ;
 	setAttr -l on ".rz";
 	setAttr -l on ".ry";
